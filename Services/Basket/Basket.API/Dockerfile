@@ -8,7 +8,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 ARG AGENT_VERSION
 # install zip curl
-RUN apk update && apk add zip wget
+RUN apt update && apt add zip wget
 
 # pull down the zip file based on ${AGENT_VERSION} ARG and unzip
 RUN wget -q https://github.com/elastic/apm-agent-dotnet/releases/download/v${AGENT_VERSION}/elastic_apm_profiler_${AGENT_VERSION}-linux-x64.zip && \
