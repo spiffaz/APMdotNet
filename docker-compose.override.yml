@@ -117,6 +117,8 @@ services:
         -E output.elasticsearch.enabled=${APM_SERVER_ELASTICSEARCH_OUTPUT_ENABLED:-true}
     environment:
       - output.elasticsearch.hosts=["elasticsearch:9200"]
+    networks:
+      - elk
     depends_on:
       - elasticsearch
     restart: unless-stopped
