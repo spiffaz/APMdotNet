@@ -1,19 +1,26 @@
+# Elastic APM for monitoring .Net APIs
+
+![image](https://github.com/spiffaz/APMdotNet/assets/35563797/3d9342ba-524d-4313-b883-cfedfa244abb)
+
 This project was done as a test for the set up of an elasticsearch cluster (Elasticearch and Kibana) with APM.
 
 It installs the APM .net agent on the basket api which can now be monitored (tracing) from the Kibana console.
 
-THe microservices based .net application was forked from https://github.com/aspnetrun/run-aspnetcore-microservices.git
+The microservices-based .net application was forked from https://github.com/aspnetrun/run-aspnetcore-microservices.git
 
-To run this, run the commands below in order
+![image](https://github.com/spiffaz/APMdotNet/assets/35563797/bd724074-c8e3-48c7-b14a-41bb62f7016b)
 
-docker compose up config
-docker compose -f docker-compose.yml -f docker-compose.override.yml up -d
+## To run this, run the commands below in order
+
+```docker compose up config```
+
+```docker compose -f docker-compose.yml -f docker-compose.override.yml up -d```
 
 
 The first command sets up the elastic credentials
 The second spins up all the resources
 
-The resources to be created are:
+## The resources to be created are:
 
 Logstash - (Actually not needed, can be commented out)
 
