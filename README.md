@@ -10,7 +10,13 @@ The microservices-based .net application was forked from https://github.com/aspn
 
 ![image](https://github.com/spiffaz/APMdotNet/assets/35563797/bd724074-c8e3-48c7-b14a-41bb62f7016b)
 
-## To run this, run the commands below in order
+Before running this, go to the Dockerfule in ``` Services/Basket/Basket.API/Dockerfile ```. Modify to your own keys (if using elastic cloud) or take out the key reference completely to use your local APM. 
+
+They can also be updated as environment variables.
+
+PS: The current keys in the config are no longer valid :)
+
+## To run this, run the commands below in order:
 
 ```docker compose up config```
 
